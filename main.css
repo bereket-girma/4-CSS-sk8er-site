@@ -1,6 +1,11 @@
 body {
   background-image: url("assets/bg.jpg");
   background-size: cover;
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: white;
+  
 }
 
 * {
@@ -9,32 +14,144 @@ body {
   box-sizing: border-box;
 }
 
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+#subscribe {
+  margin: 20px;
+  display: flex;
+  /* justify-content: center; */
+  margin-top: 26px;
+  /* text-align: center;
+  color: white;
+  font-weight: lighter; */
+}
+
+.dot {
+  height: 4px;
+  width: 4px;
+  background-color: white;
+  border-radius: 50%;
+  /* display: inline-block; */
+  margin-left: 15px;
+  margin-top: 4px;
+}
+
+.vertical-dotted-lines {
+  border-right: 4px dotted white;
+    height: 31px;
+    justify-content: flex-end;
+    margin: 15px;
+    display: flex;
+    /* padding: 18px; */
+    margin-right: -92px
+}
+
+.icons {
+  margin-left: 97px;
+}
+
+#fa {
+  padding: 6px;
+  font-size: 30px;
+  font-size: 36px;
+  width: 53px;
+  text-align: center;
+
+  border-bottom: 5px solid darkgrey;
+  margin-top: 9px;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-rss {
+  background: #ee6f2d;
+  color: lightgrey;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-youtube {
+  background: #ab2317;
+  color: white;
+}
+
+nav {
+  border-bottom-color: darkgrey;
+  /* float: center; */
+  text-align: center;
+  margin-top: 35px;
+}
+
 nav a {
   text-decoration: none;
   background: #a63634;
+  padding: 13px;
 }
 
-.top-image img {
-  width: 30%;
-  margin: 10px 500px;
+.imgContainer {
+  text-align: center;
+  margin-top: 30px;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
+#man {
+  width: 45%;
+  height: 191px;
+  object-fit: cover;
+  object-position: 0px -71px;
+  border: 5px solid white;
+}
+#grid {
+  width: 45%;
+  height: 190px;
+  object-fit: cover;
+  position: absolute;
+  top: 140px;
+  right: 397px;
+  opacity: 0.5;
+}
+#logo {
+  width: 299px;
+    height: 176px;
+    object-fit: cover;
+    position: absolute;
+    top: 149px;
+    right: 735px;
 }
 
 .card {
   background-color: white;
-  padding: 15px;
+  padding: 17px;
+  color: grey;
+  width: 257px;
 }
-
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+h3 {
+  color: #373833;
+  font-family: arial;
+}
+#dates {
+  color: #F3F3F3;
+}
+p {
+  color: #929292;
+}
+h4 {
+  text-align: center;
+  color: #A94C4E
+}
+.grid-container {
+  display: flex;
   grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  /* justify-items: center; */
+  justify-content: center;
+  margin: 40px;
 }
 
 .one {
@@ -50,15 +167,189 @@ nav a {
   grid-row: 1;
 }
 
+.TriangleTab {
+  list-style: none;
+  overflow: hidden;
+  font: 18px helvetica;
+}
+
+.TriangleTab li {
+  float: left;
+
+  background: #a63634;
+  position: relative;
+  left: 100px;
+
+  padding: 10px 15px;
+}
+
+li:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+
+  border-style: solid;
+  border-width: 21px -0 41px 46px;
+  border-color: transparent transparent transparent #a63634;
+}
+li{
+  list-style: none;
+}
+
+#skaters-grid {
+  display: grid;
+  align-items: center;
+
+  column-gap: 1%;
+  row-gap: 18%;
+  margin: -60px auto;
+  width: 55%;
+  grid-template-areas:
+    "lance lance rodney rodney tommy tommy"
+    "lance lance rodney rodney tommy tommy"
+    "steve steve steve steve tommy tommy"
+    "steve steve steve steve tommy tommy";
+}
+
+#lance {
+  min-height: 100px;
+  grid-area: lance;
+  background-image: url("assets/sk8er-4.png");
+  background-size: cover;
+  background-position: right;
+}
+
+#rodney {
+  min-height: 100px;
+  grid-area: rodney;
+  background-image: url("assets/sk8er-3.png");
+  background-size: cover;
+  background-position: initial;
+}
+#steve {
+  min-height: 100px;
+  grid-area: steve;
+  background-image: url("assets/sk8er-1.png");
+  background-size: cover;
+  background-position: center;
+  height: 110%;
+}
+#tommy {
+  min-height: 100px;
+  grid-area: tommy;
+  background-image: url("assets/sk8er-2.png");
+  background-size: cover;
+  background-position: center;
+  background-position-x: 80%;
+  height: 107%;
+  margin-top: -2.5%;
+  max-height: 110%;
+}
+.skateboarders {
+  background-size: cover;
+  background-position: bottom;
+  height: 120%;
+  border: #fff solid 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sk8ter-name {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bolder;
+  width: min-content;
+  text-align: center;
+}
+.sk8ter-name2 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
 .sk8-container {
   display: flex;
+  justify-content: center;
+  margin-top: 192px;
 }
 
 .contact-container {
-  display: flex;
-  background-color: white;
-  width: 50%;
-  padding: 20px;
-  margin: 25px 190px ;
+  background: white;
+  padding: 10px;
+  color: grey;
+  margin: 53px 323px;
 }
 
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: helvetica;
+}
+
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: helvetica;
+}
+
+input[type="submit"] {
+  background-color: #a63634;
+  color: white;
+  padding: 5px 50px;
+  border: none;
+  font-family: helvetica;
+  margin-left: 210px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h2 {
+  font-size: 23px;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+p {
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+.icons2 {
+  margin-top: 30px;
+}
+
+#fa2 {
+  padding: 9px;
+  font-size: 24px;
+
+  text-decoration: none;
+  background: grey;
+  display: inline;
+}
+
+.sk8 {
+  background: white;
+  width: 79px;
+  padding: 21px 10px;
+}
